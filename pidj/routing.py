@@ -3,7 +3,7 @@ from . import consumers
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
 websocket_urlpaterns = [
-    path('ws/', consumers.ChatConsumer.as_asgi()),
+    path('ws', consumers.ChatConsumer.as_asgi()),
 ]
 
 application = ProtocolTypeRouter(
