@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8^8+#hxs!bm94u^aiit2=+rdc$d(7hsu(iath!1$v#um*&bbd^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -68,6 +68,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'pidj.wsgi.application'
+ASGI_APPLICATION = "pidj.routing.application"
 
 
 # Database
@@ -121,3 +122,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+redis_host = "localhost"
+CHANNEL_LAYERS = {
+      "default": {
+      "CONFIG": {
+         "hosts": [(redis_host, 6379)],
+    },
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+  },
+}
