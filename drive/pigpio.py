@@ -16,6 +16,7 @@ p.start(90)
 
 
 def forwordMotion():
+    print('bbbvbvvv')
     GPIO.output(lmin1, GPIO.HIGH)
     GPIO.output(lmin2, GPIO.LOW)
     return 0

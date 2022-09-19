@@ -29,6 +29,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
     async def process_chat_data(self, event):
         print(event["value"])
         command = event["value"]
+        print(command,'consum')
         vehicleMotion(command)
 
         message = event["value"]

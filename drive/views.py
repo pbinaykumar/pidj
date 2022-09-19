@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 from .pigpio import forwordMotion,backwordMotion,leftMotion,rightMotion,stopVehicle
 
 def vehicleMotion(command):
+    print(command,'commmmmm')
     if command == 'f':
         forwordMotion()
     elif command == 'b':
