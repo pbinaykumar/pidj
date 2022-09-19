@@ -7,6 +7,7 @@ lmen = 25
 
 try:
     GPIO.setmode(GPIO.BCM)
+    GPIO.cleanup()
     GPIO.setup(lmin1, GPIO.OUT)
     GPIO.setup(lmin2, GPIO.OUT)
     GPIO.setup(lmen, GPIO.OUT)
