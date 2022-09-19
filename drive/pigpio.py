@@ -7,7 +7,6 @@ lmen = 25
 
 try:
     GPIO.setmode(GPIO.BCM)
-    GPIO.cleanup()
     GPIO.setup(lmin1, GPIO.OUT)
     GPIO.setup(lmin2, GPIO.OUT)
     GPIO.setup(lmen, GPIO.OUT)
@@ -42,25 +41,3 @@ def rightMotion():
 
 def stopVehicle():
     return 0
-
-while (1):
-
-    #     x=input()
-    y = input()
-
-    if True:
-        print("run")
-        if (y == 'f'):
-            GPIO.output(in1, GPIO.HIGH)
-            GPIO.output(in2, GPIO.LOW)
-            print("forward")
-            x = 'z'
-        else:
-            GPIO.output(in1, GPIO.LOW)
-            GPIO.output(in2, GPIO.HIGH)
-            print("backward")
-            x = 'z'
-
-    else:
-        print("<<<  wrong data  >>>")
-        print("please enter the defined data to continue.....")
