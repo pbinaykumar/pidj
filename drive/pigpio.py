@@ -6,7 +6,6 @@ lmin2 = 23
 lmen = 25
 
 try:
-    GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(lmin1, GPIO.OUT)
     GPIO.setup(lmin2, GPIO.OUT)
@@ -16,7 +15,9 @@ try:
     p = GPIO.PWM(lmen, 2000)
     p.start(90)
 except:
-    print('')
+    pass
+finally:
+    GPIO.cleanup()
 
 def forwordMotion():
     GPIO.output(lmin1, GPIO.HIGH)
