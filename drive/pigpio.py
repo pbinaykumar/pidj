@@ -59,5 +59,4 @@ def stopVehicle():
     GPIO.output(lmin2, GPIO.LOW)
     GPIO.output(rmin1, GPIO.LOW)
     GPIO.output(rmin2, GPIO.LOW)
-    GPIO.cleanup()
     return 0
