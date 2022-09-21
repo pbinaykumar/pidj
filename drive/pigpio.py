@@ -18,8 +18,10 @@ GPIO.output(lmin1, GPIO.LOW)
 GPIO.output(lmin2, GPIO.LOW)
 GPIO.output(rmin1, GPIO.LOW)
 GPIO.output(rmin2, GPIO.LOW)
-p = GPIO.PWM(lmen, 2000)
-p.start(90)
+l = GPIO.PWM(lmen, 2000)
+l.start(90)
+r = GPIO.PWM(rmen, 2000)
+r.start(90)
 
 
 def forwordMotion():
@@ -37,8 +39,13 @@ def backwordMotion():
     GPIO.output(rmin2, GPIO.HIGH)
     return 0
 
-
 def leftMotion():
+    GPIO.output(lmin1, GPIO.LOW)
+    GPIO.output(lmin2, GPIO.HIGH)
+    GPIO.output(rmin1, GPIO.HIGH)
+    GPIO.output(rmin2, GPIO.LOW)
+    return 0
+def rightMotion():
     GPIO.output(lmin1, GPIO.HIGH)
     GPIO.output(lmin2, GPIO.LOW)
     GPIO.output(rmin1, GPIO.LOW)
@@ -46,12 +53,7 @@ def leftMotion():
     return 0
 
 
-def rightMotion():
-    GPIO.output(lmin1, GPIO.LOW)
-    GPIO.output(lmin2, GPIO.HIGH)
-    GPIO.output(rmin1, GPIO.HIGH)
-    GPIO.output(rmin2, GPIO.LOW)
-    return 0
+
 
 
 def stopVehicle():
