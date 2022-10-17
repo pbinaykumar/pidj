@@ -12,7 +12,7 @@ def vehicleMotion(command):
     elif command == 'r':
         data = rightMotion()
     else:
-        data = backwordMotion()
+        data = stopVehicle()
 
     return data
 
