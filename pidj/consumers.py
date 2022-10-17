@@ -30,8 +30,8 @@ class ChatConsumer(AsyncWebsocketConsumer):
         print(event["value"])
         command = event["value"]
         print(command,'consum')
-        vehicleMotion(command)
+        data = vehicleMotion(command)
 
         message = event["value"]
 
-        await self.send(message)
+        await self.send(data)

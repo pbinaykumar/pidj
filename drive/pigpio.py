@@ -29,7 +29,7 @@ def forwordMotion():
     GPIO.output(lmin2, GPIO.LOW)
     GPIO.output(rmin1, GPIO.HIGH)
     GPIO.output(rmin2, GPIO.LOW)
-    return 0
+    return "forword"
 
 
 def backwordMotion():
@@ -37,20 +37,20 @@ def backwordMotion():
     GPIO.output(lmin2, GPIO.HIGH)
     GPIO.output(rmin1, GPIO.LOW)
     GPIO.output(rmin2, GPIO.HIGH)
-    return 0
+    return "backword"
 
 def leftMotion():
     GPIO.output(lmin1, GPIO.LOW)
     GPIO.output(lmin2, GPIO.HIGH)
     GPIO.output(rmin1, GPIO.HIGH)
     GPIO.output(rmin2, GPIO.LOW)
-    return 0
+    return "left"
 def rightMotion():
     GPIO.output(lmin1, GPIO.HIGH)
     GPIO.output(lmin2, GPIO.LOW)
     GPIO.output(rmin1, GPIO.LOW)
     GPIO.output(rmin2, GPIO.HIGH)
-    return 0
+    return "right"
 
 
 
@@ -61,4 +61,4 @@ def stopVehicle():
     GPIO.output(lmin2, GPIO.LOW)
     GPIO.output(rmin1, GPIO.LOW)
     GPIO.output(rmin2, GPIO.LOW)
-    return 0
+    return "stop"

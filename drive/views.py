@@ -4,17 +4,17 @@ from .pigpio import forwordMotion,backwordMotion,leftMotion,rightMotion,stopVehi
 def vehicleMotion(command):
     print(command,'commmmmm')
     if command == 'f':
-        forwordMotion()
+        data = forwordMotion()
     elif command == 'b':
-        backwordMotion()
+        data = backwordMotion()
     elif command == 'l':
-        leftMotion()
+        data = leftMotion()
     elif command == 'r':
-        rightMotion()
+        data = rightMotion()
     else:
-        stopVehicle()
+        data = stopVehicle()
 
-    return 0
+    return data
 
 
 def forWard(request):
